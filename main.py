@@ -1,6 +1,7 @@
 """
 For running experiments.
 """
+import torch
 from experiments import evaluate, report_metrics, train
 
 if __name__ == "__main__":
