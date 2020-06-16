@@ -130,7 +130,7 @@ def train_step(training_pair, encoder, decoder, encoder_optim, decoder_optim, is
             decoder_input = topi.squeeze().detach()
         else:
             decoder_input = target_tensor[i]
-        loss += criterion(decoder_output, target_tensor[i])
+        loss += criterion(decoder_output, target_tensor[i]).to(device)
 
         if not teacher_force and decoder_input.item() == EOS_token:
             break
