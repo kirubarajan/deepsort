@@ -10,6 +10,7 @@ checkpoints/
 # Compiled Python #
 __pycache__
 */__pycache__
+*.pyc
 
 # IDE Generated #
 .idea/
