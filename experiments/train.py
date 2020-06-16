@@ -52,8 +52,8 @@ def run():
                               embedding_dim=embedding_dim,
                               hidden_dim=hidden_dim).to(device)
 
-    train(encoder=encoder,
-          decoder=decoder,
+    train(encoder=encoder.cuda(),
+          decoder=decoder.cuda(),
           optim=optimizer,
           optim_params=optimizer_params,
           weight_init=weight_init,
